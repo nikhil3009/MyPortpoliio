@@ -1,3 +1,8 @@
+/**
+ * General carousel styles
+ *
+ * @format
+ */
 /** @format */
 
 * {
@@ -6,13 +11,6 @@
 	box-sizing: border-box;
 	font-family: 'poppins', sans-serif;
 	scroll-behavior: smooth;
-}
-.icon {
-	background-image: url('../Icons/next-js.svg');
-	width: 20px; /* or the size you want */
-	height: 20px; /* or the size you want */
-	background-size: cover; /* or contain depending on your needs */
-	background-repeat: no-repeat;
 }
 
 body {
@@ -1367,5 +1365,85 @@ body {
 	}
 	.top i {
 		color: #000;
+	}
+}
+#Projects {
+	position: relative;
+	padding: 40px 0; /* Add padding around the carousel */
+	background-color: black; /* Set the background color */
+	overflow: hidden; /* Ensure nothing spills out of this container */
+}
+
+/* General carousel item styles */
+#Projects .owl-carousel .item {
+	background-size: cover; /* Cover the entire area of the item */
+	background-position: center; /* Center the background image */
+	border-radius: 50%; /* Make the items round */
+	width: 250px; /* Fixed width, adjust as needed */
+	height: 250px; /* Fixed height, adjust as needed */
+	margin: 10px; /* Add some space around items */
+	position: relative; /* Positioning context for the overlay */
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+	transition: transform 0.5s, opacity 0.5s; /* Smooth transitions */
+	overflow: hidden; /* Ensure content fits within the border-radius */
+}
+
+/* Centered item styles */
+#Projects .owl-carousel .center .item {
+	transform: scale(1.05); /* Slightly larger scale for the center item */
+	opacity: 1; /* Fully opaque center item */
+}
+
+/* Navigation arrow styles */
+#Projects .owl-carousel .owl-nav .owl-prev,
+#Projects .owl-carousel .owl-nav .owl-next {
+	position: absolute;
+	top: 50%; /* Align arrows vertically */
+	transform: translateY(-50%); /* Center arrows */
+	background-color: #fff; /* White arrows */
+	color: #333; /* Dark arrow color */
+	border-radius: 50%; /* Round arrows */
+	font-size: 2em; /* Larger arrows */
+	width: 50px; /* Width of the arrow containers */
+	height: 50px; /* Height of the arrow containers */
+	display: flex; /* Flexbox to center the arrow icon */
+	align-items: center; /* Align arrow icon vertically */
+	justify-content: center; /* Align arrow icon horizontally */
+	cursor: pointer; /* Indicate clickable arrows */
+}
+
+#Projects .owl-carousel .owl-nav .owl-prev {
+	left: 25px; /* Position left arrow from the left side */
+}
+
+#Projects .owl-carousel .owl-nav .owl-next {
+	right: 25px; /* Position right arrow from the right side */
+}
+
+/* Hide default buttons (use custom arrows) */
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+	display: none;
+}
+
+/* Dots navigation styles */
+.owl-dot {
+	background-color: white; /* White dots */
+	opacity: 0.5; /* Semi-transparent dots */
+	transition: opacity 0.5s; /* Smooth transition for dots */
+}
+
+.owl-dot.active {
+	opacity: 1; /* Full opacity for the active dot */
+}
+
+/* Responsive adjustments for smaller screens */
+@media only screen and (max-width: 600px) {
+	#Projects .owl-carousel .owl-nav .owl-prev,
+	#Projects .owl-carousel .owl-nav .owl-next {
+		/* Adjust sizes and positions for smaller screens */
+		font-size: 1.5em;
+		width: 40px;
+		height: 40px;
 	}
 }

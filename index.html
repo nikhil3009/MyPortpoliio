@@ -19,6 +19,36 @@
 			rel="stylesheet"
 			href="./files/style.css" />
 		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+		<script src="path_to/jquery.min.js"></script>
+		<script src="path_to/owl.carousel.min.js"></script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+		<link
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
 			rel="stylesheet" />
 		<link
@@ -418,105 +448,57 @@
 		</section>
 
 		<section id="Projects">
-			<div
-				id="portfolio"
-				class="services">
+			<div class="owl-carousel owl-theme">
 				<div
-					class="main-text"
-					id="serv">
-					<h2>My <span>Projects</span></h2>
-					<div class="serv-container">
-						<div class="row">
-							<img src="./img/FMD.png" />
-							<div class="layer">
-								<h5>Face Mask Detection</h5>
-								<p>
-									Face mask of the people are detected by using OpenCV, Python
-									and find out the person without mask.
-								</p>
-
-								<a href="#"
-									><i
-										class="bx bxs-face-mask"
-										style="color: aliceblue"></i
-								></a>
-							</div>
-						</div>
-
-						<div class="row">
-							<img src="./img/DD.png" />
-							<div class="layer">
-								<h5>Drowsiness Detection</h5>
-								<p>
-									The face of the driver is captured and eye is detected by
-									OpenCV, Python. If eye is closed alarm rings.
-								</p>
-
-								<a href="#"
-									><i
-										class="bx bxs-low-vision"
-										style="color: aliceblue"></i
-								></a>
-							</div>
-						</div>
-
-						<div class="row">
-							<img src="./img/DA.png" />
-							<div class="layer">
-								<h5>Desktop Application</h5>
-								<p>
-									A windows application to manage the work of the staff’s in the
-									company by using Python Tkinter and SQL.
-								</p>
-
-								<a href="#"
-									><i
-										class="bx bx-desktop"
-										style="color: aliceblue"></i
-								></a>
-							</div>
-						</div>
-					</div>
+					class="item"
+					style="background-image: url('./Icons/Netflix.png')">
+					<h2>NetflixGPT</h2>
+					<p>Description</p>
+					<a
+						href="#"
+						class="button"
+						>Click Me</a
+					>
+				</div>
+				<div
+					class="item"
+					style="
+						background-image: url('https://i.pinimg.com/originals/05/cb/02/05cb027cf426d2511202d72f5c306fbb.jpg');
+					">
+					<h2>FoodHunt</h2>
+					<p>Description</p>
+					<a
+						href="#"
+						class="button"
+						>Click Me</a
+					>
+				</div>
+				<div
+					class="item"
+					style="background-image: url('./Icons/Querryoverflow.png')">
+					<h2>Querry-Overflow</h2>
+					<p>Description</p>
+					<a
+						href="#"
+						class="button"
+						>Click Me</a
+					>
 				</div>
 			</div>
-		</section>
-
-		<section id="Services">
-			<div class="project">
-				<div class="container">
-					<h1 class="sub-title">My <span>Services</span></h1>
-					<div class="prj-list">
-						<div>
-							<i
-								class="bx bx-code"
-								style="color: #00eeff"></i>
-							<h2>Web Development</h2>
-							<p>
-								Plan, create and code internet sites and web pages with modern
-								and artful design.
-							</p>
-						</div>
-						<div>
-							<i
-								class="bx bx-cube"
-								style="color: #00eeff"></i>
-							<h2>UI / UX Design</h2>
-							<p>
-								Specialized in creating clean, artful design that are both
-								intuitive and functional.
-							</p>
-						</div>
-						<div>
-							<i
-								class="bx bxl-android"
-								style="color: #00eeff"></i>
-							<h2>Software Development</h2>
-							<p>
-								Mobile application developer with knowledge of Java and Android
-								Studio.
-							</p>
-						</div>
-					</div>
+			<div class="owl-nav">
+				<div class="owl-prev">
+					<img
+						width="48"
+						height="48"
+						src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/48/external-Chevron-arrows-tanah-basah-glyph-tanah-basah-4.png"
+						alt="external-Chevron-arrows-tanah-basah-glyph-tanah-basah-4" />
+				</div>
+				<div class="owl-next">
+					<img
+						width="24"
+						height="24"
+						src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/external-chevron-arrows-tanah-basah-basic-outline-tanah-basah-7.png"
+						alt="external-chevron-arrows-tanah-basah-basic-outline-tanah-basah-7" />
 				</div>
 			</div>
 		</section>
@@ -528,25 +510,17 @@
 				<h2>Contact <span>Me</span></h2>
 				<h4>Let's Work Together</h4>
 				<div class="contact-list">
-					<li><i class="bx bxs-send"></i>midhun890390@gmail.com</li>
-					<li><i class="bx bxs-phone-call"></i>8903909217</li>
+					<li><i class="bx bxs-send"></i>sainikhil3009@gmail.com</li>
+					<li><i class="bx bxs-phone-call"></i>+14103698719</li>
 				</div>
 				<div class="contact-icons">
 					<a
-						href="https://github.com/vsmidhun21"
+						href="https://github.com/nikhil3009"
 						target="_blank"
 						><i class="bx bxl-github"></i
 					></a>
-					<a href="https://www.youtube.com/@Unlucky_Coder21"
-						><i class="bx bxl-youtube"></i
-					></a>
 					<a
-						href="https://instagram.com/midhun_021?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D"
-						target="_blank"
-						><i class="bx bxl-instagram"></i
-					></a>
-					<a
-						href="https://www.linkedin.com/in/midhun-v-s"
+						href="https://www.linkedin.com/in/nikhil3009/"
 						target="_blank"
 						><i class="bx bxl-linkedin"></i
 					></a>
@@ -555,13 +529,7 @@
 		</section>
 
 		<div class="last-text">
-			<p>
-				Developed by Midhun
-				<i
-					class="bx bx-copyright"
-					style="color: white"></i>
-				2024
-			</p>
+			<p>Developed by SaiNikhil</p>
 		</div>
 		<a
 			href="#Home"
