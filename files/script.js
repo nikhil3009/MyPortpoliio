@@ -34,9 +34,6 @@ $(document).ready(function () {
 			600: {
 				items: 3, // On medium screens, show three items
 			},
-			1000: {
-				items: 5, // On large screens, show five items
-			},
 		},
 	});
 

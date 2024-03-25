@@ -21,6 +21,7 @@ body {
 	background-color: #000; /* Black background */
 	padding: 50px;
 	text-align: center;
+	margin: 0;
 }
 
 .subtitle span {
@@ -29,12 +30,10 @@ body {
 
 .skills-grid {
 	display: grid;
-	grid-template-columns: repeat(
-		auto-fill,
-		minmax(250px, 1fr)
-	); /* Arrange cards in a single row */
+	width: 100%;
+	grid-template-columns: repeat(4, 1fr); /* Arrange cards in a single row */
 	gap: 20px;
-	max-width: 1200px;
+	padding: 0 50px;
 	margin: 0 auto;
 }
 
@@ -88,26 +87,15 @@ body {
 @media (max-width: 1200px) {
 	.skills-grid {
 		grid-template-columns: repeat(
-			auto-fill,
-			minmax(250px, 1fr)
+			4,
+			1fr
 		); /* Adjust to single column for smaller screens */
-	}
-
-	.skill-list {
-		grid-template-columns: repeat(
-			auto-fill,
-			minmax(120px, 1fr)
-		); /* Adjust grid for skills list for smaller screens */
 	}
 }
 
 @media (max-width: 768px) {
 	.skills-grid {
 		grid-template-columns: 1fr; /* Full width single column for very small screens */
-	}
-
-	.skill-list {
-		grid-template-columns: 1fr; /* Single column for skills on very small screens */
 	}
 }
 
@@ -171,7 +159,7 @@ body {
 }
 
 .home-content {
-	max-width: 600px;
+	max-width: 800px;
 }
 
 .home-content h1 {
@@ -292,7 +280,7 @@ body {
 	/*gap: 1.5rem;*/
 	width: 100%;
 	justify-content: space-between;
-	min-height: 100vh;
+
 	padding: 70px 5% 0;
 }
 
@@ -1378,19 +1366,19 @@ body {
 #Projects .owl-carousel .item {
 	background-size: cover; /* Cover the entire area of the item */
 	background-position: center; /* Center the background image */
-	border-radius: 50%; /* Make the items round */
-	width: 250px; /* Fixed width, adjust as needed */
-	height: 250px; /* Fixed height, adjust as needed */
+	border-radius: 40%; /* Make the items round */
+	width: 500px; /* Fixed width, adjust as needed */
+	height: 500px; /* Fixed height, adjust as needed */
 	margin: 10px; /* Add some space around items */
 	position: relative; /* Positioning context for the overlay */
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5); /* Shadow for depth */
 	transition: transform 0.5s, opacity 0.5s; /* Smooth transitions */
 	overflow: hidden; /* Ensure content fits within the border-radius */
 }
 
 /* Centered item styles */
 #Projects .owl-carousel .center .item {
-	transform: scale(1.05); /* Slightly larger scale for the center item */
+	transform: scale(1.1); /* Slightly larger scale for the center item */
 	opacity: 1; /* Fully opaque center item */
 }
 
