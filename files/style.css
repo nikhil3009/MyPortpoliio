@@ -1,10 +1,79 @@
-/**
- * General carousel styles
- *
- * @format
- */
 /** @format */
 
+#Projects {
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	padding: 50px 0;
+	position: relative;
+}
+
+.owl-carousel .item {
+	transition: transform 0.5s ease, z-index 0s ease 0s;
+	border-radius: 1%; /* Rounded corners */
+	cursor: pointer;
+	margin: 15px;
+	background-size: cover; /* Background images cover the card */
+	background-position: center; /* Center background images */
+	padding: 40px 20px 20px; /* Adjusted padding */
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end; /* Text aligned to the bottom */
+	min-height: 250px; /* Minimum height */
+	position: relative; /* Required for z-index to function properly */
+	overflow: hidden; /* Ensures no overflow outside the rounded corners */
+}
+
+.owl-carousel .item h1,
+.owl-carousel .item p {
+	color: #fff;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Make text readable on varying backgrounds */
+}
+
+.owl-carousel .item h1 {
+	opacity: 1; /* Ensure title is always visible */
+}
+
+.owl-carousel .item p {
+	transition: opacity 0.5s ease, transform 0.5s ease;
+	transform: translateY(20px);
+	opacity: 0; /* Start hidden */
+	z-index: -1; /* Ensure it doesn't interfere when not hovered */
+	position: relative; /* Needed for z-index manipulation */
+}
+.owl-carousel .item:hover {
+	transform: scale(1.05); /* Enlarge */
+	z-index: 10; /* Bring to front */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+}
+
+.owl-carousel .item:hover p {
+	opacity: 1; /* Make description visible */
+	transform: translateY(0);
+	z-index: 1;
+}
+
+.nav-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: none;
+	border: none;
+	color: #fff;
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+#navigate-left {
+	left: 20px;
+}
+
+#navigate-right {
+	right: 20px;
+}
+
+.end {
+}
 * {
 	margin: 0;
 	padding: 0;
@@ -439,108 +508,6 @@ body {
 	transform-origin: left;
 }
 
-.progress-line.html span {
-	width: 90%;
-}
-
-.progress-line.css span {
-	width: 80%;
-}
-
-.progress-line.python span {
-	width: 75%;
-}
-
-.progress-line.java span {
-	width: 50%;
-}
-
-.progress-line.cpls span {
-	width: 50%;
-}
-
-.progress-line span::after {
-	position: absolute;
-	padding: 1px 8px;
-	background-color: #000;
-	color: #fff;
-	font-size: 12px;
-	border-radius: 3px;
-	top: -28px;
-	right: -20px;
-	animation: showText 0.5s 1.5s linear forwards;
-	opacity: 0;
-}
-
-.progress-line.html span::after {
-	content: '90%';
-}
-
-.progress-line.css span::after {
-	content: '80%';
-}
-
-.progress-line.python span::after {
-	content: '75%';
-}
-
-.progress-line.java span::after {
-	content: '50%';
-}
-
-.progress-line.cpls span::after {
-	content: '50%';
-}
-
-.progress-line span::before {
-	content: '';
-	position: absolute;
-	width: 0;
-	height: 0;
-	border: 7px solid transparent;
-	border-bottom-width: 0px;
-	border-right-width: 0px;
-	border-top-color: #000;
-	top: -10px;
-	right: 0;
-	animation: showText 0.5s 1.5s linear forwards;
-	opacity: 0;
-}
-
-.radial-bars {
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	align-items: flex-start;
-}
-
-.radial-bars .radial-bar {
-	width: 50%;
-	height: 170px;
-	margin-bottom: 10px;
-	position: relative;
-}
-
-.radial-bars .radial-bar svg {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%) rotate(-90deg);
-	width: 120px;
-	height: 160px;
-}
-
-.radial-bars .radial-bar .progress-bar {
-	stroke-width: 10;
-	stop-color: black;
-	fill: transparent;
-	stroke-dasharray: 502;
-	stroke-dashoffset: 502;
-	stroke-linecap: round;
-	animation: animate-bar 1s linear forwards;
-}
-
 .path {
 	stroke-width: 10;
 	stroke: rgb(147, 102, 195);
@@ -589,195 +556,6 @@ body {
 	font-weight: 500;
 	animation: showText 0.5s 1s linear forwards;
 	opacity: 0;
-}
-
-/*projects*/
-#Projects {
-	background-color: #000;
-}
-.main-text {
-	padding-top: 50px;
-	margin-top: 10px;
-	padding-bottom: 130px;
-}
-
-.main-text h2 {
-	font-size: 60px;
-	line-height: 1;
-	text-align: center;
-	padding: 50px;
-	padding-bottom: 110px;
-}
-
-.main-text h2 span {
-	color: rgb(147, 102, 195);
-}
-
-.serv-container {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(259px, auto));
-	align-items: center;
-	justify-content: space-around;
-}
-
-.row {
-	position: relative;
-	border-radius: 8px;
-	cursor: pointer;
-	padding: 0px;
-	overflow: hidden;
-}
-
-.row img {
-	width: 100%;
-	max-width: 300px;
-	max-height: 300px;
-	border-radius: 15px;
-	display: block;
-	transition: transform 0.5s;
-	padding: 10px;
-}
-
-.layer {
-	width: 100%;
-	max-width: 300px;
-	max-height: 300px;
-	height: 0;
-	opacity: 0;
-	background: linear-gradient(rgba(255, 255, 255, 0.5), rgb(147, 102, 195));
-	position: absolute;
-	border-radius: 8px;
-	left: 0;
-	bottom: 0;
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	padding: 40px;
-	transition: height 0.5s;
-}
-
-.layer h5 {
-	color: #000;
-	font-size: 20px;
-	font-weight: 600;
-	margin-bottom: 15px;
-}
-
-.layer p {
-	color: black;
-	font-size: 1rem;
-	font-weight: 400;
-	line-height: 1.8;
-	text-align: justify;
-}
-
-.layer i {
-	color: rgb(147, 102, 195);
-	margin-top: 20px;
-	font-size: 20px;
-	background: #000;
-	width: 60px;
-	height: 60px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 50%;
-}
-
-.row:hover img {
-	transform: scale(1.01);
-}
-
-.row:hover .layer {
-	height: 100%;
-	opacity: 1;
-}
-
-/* Service*/
-
-#Services {
-	background-color: #000;
-}
-
-.sub-title {
-	text-align: center;
-	font-size: 60px;
-	padding-top: 0px;
-	padding-bottom: 70px;
-}
-
-.sub-title span {
-	color: rgb(147, 102, 195);
-}
-
-.prj-list {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(259px, 1fr));
-	grid-gap: 40px;
-	margin-top: 50px;
-}
-
-.prj-list div {
-	background-color: transparent;
-	padding: 40px;
-	font-size: 13px;
-	font-weight: 13px;
-	border-right: 10px;
-	border-radius: 20px;
-	transition: background 0.5s, transform 0.5s;
-	/*box-shadow: 1px 1px 20px #012290f7, 1px 1px 40px #0053b8f7;*/
-	border: rgb(147, 102, 195) 5px solid;
-}
-
-.container {
-	padding: 50px;
-}
-
-.prj-list div i {
-	font-size: 50px;
-	margin-bottom: 30px;
-}
-
-.prj-list div h2 {
-	font-size: 30px;
-	font-weight: 500;
-	margin-bottom: 15px;
-}
-
-.prj-list div a {
-	text-decoration: none;
-	color: #000;
-	font-size: 12px;
-	margin-top: 20px;
-	display: inline-block;
-}
-
-.read {
-	display: inline-block;
-	padding: 12px 20px;
-	background: rgb(147, 102, 195);
-	border-radius: 40px;
-	font-size: 16px;
-	color: #081b29;
-	letter-spacing: 1px;
-	text-decoration: none;
-	font-weight: 600;
-	opacity: 0;
-	animation: slideTop 1s ease forwards;
-	animation-delay: 1s;
-}
-
-.read:hover {
-	box-shadow: 0 0 5px rgb(147, 102, 195), 0 0 25px rgb(147, 102, 195),
-		0 0 50pc rgb(147, 102, 195), 0 0 100px rgb(147, 102, 195),
-		0 0 200px rgb(147, 102, 195);
-}
-
-.prj-list div:hover {
-	transform: translateY(-2px);
 }
 
 /*contacts*/
@@ -1353,85 +1131,5 @@ body {
 	}
 	.top i {
 		color: #000;
-	}
-}
-#Projects {
-	position: relative;
-	padding: 40px 0; /* Add padding around the carousel */
-	background-color: black; /* Set the background color */
-	overflow: hidden; /* Ensure nothing spills out of this container */
-}
-
-/* General carousel item styles */
-#Projects .owl-carousel .item {
-	background-size: cover; /* Cover the entire area of the item */
-	background-position: center; /* Center the background image */
-	border-radius: 40%; /* Make the items round */
-	width: 500px; /* Fixed width, adjust as needed */
-	height: 500px; /* Fixed height, adjust as needed */
-	margin: 10px; /* Add some space around items */
-	position: relative; /* Positioning context for the overlay */
-	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5); /* Shadow for depth */
-	transition: transform 0.5s, opacity 0.5s; /* Smooth transitions */
-	overflow: hidden; /* Ensure content fits within the border-radius */
-}
-
-/* Centered item styles */
-#Projects .owl-carousel .center .item {
-	transform: scale(1.1); /* Slightly larger scale for the center item */
-	opacity: 1; /* Fully opaque center item */
-}
-
-/* Navigation arrow styles */
-#Projects .owl-carousel .owl-nav .owl-prev,
-#Projects .owl-carousel .owl-nav .owl-next {
-	position: absolute;
-	top: 50%; /* Align arrows vertically */
-	transform: translateY(-50%); /* Center arrows */
-	background-color: #fff; /* White arrows */
-	color: #333; /* Dark arrow color */
-	border-radius: 50%; /* Round arrows */
-	font-size: 2em; /* Larger arrows */
-	width: 50px; /* Width of the arrow containers */
-	height: 50px; /* Height of the arrow containers */
-	display: flex; /* Flexbox to center the arrow icon */
-	align-items: center; /* Align arrow icon vertically */
-	justify-content: center; /* Align arrow icon horizontally */
-	cursor: pointer; /* Indicate clickable arrows */
-}
-
-#Projects .owl-carousel .owl-nav .owl-prev {
-	left: 25px; /* Position left arrow from the left side */
-}
-
-#Projects .owl-carousel .owl-nav .owl-next {
-	right: 25px; /* Position right arrow from the right side */
-}
-
-/* Hide default buttons (use custom arrows) */
-.owl-carousel .owl-nav button.owl-prev,
-.owl-carousel .owl-nav button.owl-next {
-	display: none;
-}
-
-/* Dots navigation styles */
-.owl-dot {
-	background-color: white; /* White dots */
-	opacity: 0.5; /* Semi-transparent dots */
-	transition: opacity 0.5s; /* Smooth transition for dots */
-}
-
-.owl-dot.active {
-	opacity: 1; /* Full opacity for the active dot */
-}
-
-/* Responsive adjustments for smaller screens */
-@media only screen and (max-width: 600px) {
-	#Projects .owl-carousel .owl-nav .owl-prev,
-	#Projects .owl-carousel .owl-nav .owl-next {
-		/* Adjust sizes and positions for smaller screens */
-		font-size: 1.5em;
-		width: 40px;
-		height: 40px;
 	}
 }
