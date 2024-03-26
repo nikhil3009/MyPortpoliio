@@ -1,6 +1,7 @@
 {
 	"liveServer.settings.port": 5502,
 	"files.associations": {
-		"hw3_2.C": "cpp"
+		"hw3_2.C": "cpp",
+		"hw3_1.C": "cpp"
 	}
 }
