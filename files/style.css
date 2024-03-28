@@ -1,4 +1,84 @@
 /** @format */
+/** @format */
+
+.Background {
+	background-color: #000; /* Dark background */
+	color: rgb(147, 102, 195); /* Main font color */
+	font-family: Arial, sans-serif;
+	overflow-x: hidden; /* Prevents horizontal scroll */
+	padding-top: 100px;
+}
+
+.education-roadmap {
+	perspective: 1000px;
+	transform-style: preserve-3d;
+	padding-left: 50px; /* Adjusted to prevent clipping on the left */
+}
+
+.roadmap-point {
+	background-color: rgb(
+		30,
+		30,
+		30
+	); /* Slightly lighter than body for contrast */
+	border-left: 5px solid rgb(147, 102, 195);
+	padding: 20px;
+	margin: 20px 0;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+	transform: translateZ(0);
+	transition: transform 0.5s ease, box-shadow 0.5s ease;
+	transform-origin: center left; /* Keeps the transformation centered to the left */
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+}
+.point-title {
+	font-size: 18px;
+	font-weight: bold;
+	margin-right: 18px; /* Space between the icon and the text */
+	vertical-align: middle;
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+}
+
+.year-range {
+	display: inline;
+	font-weight: normal;
+	font-size: 16px;
+	margin-left: 8px;
+}
+
+.university-info {
+	display: flex;
+	align-items: center; /* Center-align the university name and logo */
+	margin-top: 10px; /* Add some space above the university info */
+}
+
+.university-logo {
+	height: 40px; /* Adjust based on your preference */
+	margin-left: 10px; /* Space between text and logo */
+	margin-right: 10px;
+}
+.university-logo2 {
+	height: 40px; /* Adjust based on your preference */
+	margin-left: 10px; /* Space between text and logo */
+	margin-right: 10px;
+}
+.degree-logo {
+	margin-right: 10px;
+}
+
+.roadmap-point:hover {
+	transform: translateZ(50px) translateX(10px); /* Adjusts to prevent clipping */
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.point-date,
+.point-title,
+.point-description {
+	margin: 5px 0;
+}
 
 #Projects {
 	background-color: #000;
@@ -351,17 +431,6 @@ body {
 	justify-content: space-between;
 
 	padding: 70px 5% 0;
-}
-
-.about-img {
-	display: inline-block;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-	padding-right: 10%;
-	margin-top: 2.5%;
-	/*margin-top: 7.5%;*/
-	opacity: 1;
 }
 
 .abt-res {

@@ -34,3 +34,12 @@ $(document).ready(function () {
 		},
 	});
 });
+function hoverEffect(isHovering, element) {
+	if (isHovering) {
+		element.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.6)';
+		element.style.transform = 'translateZ(50px)';
+	} else {
+		element.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.5)';
+		element.style.transform = 'translateZ(0)';
+	}
+}

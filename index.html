@@ -79,9 +79,9 @@
 					>Home</a
 				>
 				<a
-					href="#About"
+					href="#Background"
 					style="--i: 2"
-					>About</a
+					>Background</a
 				>
 				<a
 					href="#Skills"
@@ -94,8 +94,13 @@
 					>Projects</a
 				>
 				<a
-					href="#Contact"
+					href="#About"
 					style="--i: 5"
+					>About</a
+				>
+				<a
+					href="#Contact"
+					style="--i: 6"
 					>Contact</a
 				>
 			</nav>
@@ -144,38 +149,42 @@
 
 		<section>
 			<div
-				class="about"
-				id="About">
-				<div class="about-img">
-					<h2>Education</h2>
-				</div>
-				<div class="about-text">
-					<h2>About <span>Me</span></h2>
-					<p>
-						I’m the tech wizard who thrives on the frontline of code, crafting
-						seamless digital experiences from the ground up. In the tech
-						trenches for over three years, I've honed a fierce command over both
-						the face and the engine of web applications. Forget the dusty
-						textbooks; my education has been the cut and thrust of
-						problem-solving in dynamic environments like the University of
-						Maryland, IBM, and the innovation-driven corridors of TechTrunks.
-						With an arsenal of languages at my fingertips and the latest
-						frameworks under my belt, I'm all about turning bold ideas into
-						software that sings. Ready for the next challenge, I'm here to code,
-						create, and catapult your projects to new heights. Let's make
-						something awesome together.<br />
-						<br />
-						<a
-							href="https://sainikhil-resume.tiiny.site/"
-							style="--i: 11"
-							class="abtbtn-box"
-							target="_blank"
-							>Download Resume</a
-						>
-					</p>
-				</div>
-				<div>
-					<h2>Professional Experience</h2>
+				class="Background"
+				id="Background">
+				<div class="education-roadmap">
+					<div
+						class="roadmap-point"
+						onmouseover="hoverEffect(true, this)"
+						onmouseout="hoverEffect(false, this)">
+						<div class="point-title">
+							<i class="fa-solid fa-graduation-cap degree-logo"></i> Bachelor of
+							Technology in Computer Science and Engineering
+						</div>
+						<div class="university-info">
+							<img
+								src="./Icons/LPU_logo.png"
+								alt="University Logo"
+								class="university-logo" />
+							<span>Lovely Professional University</span>
+						</div>
+					</div>
+
+					<div
+						class="roadmap-point"
+						onmouseover="hoverEffect(true, this)"
+						onmouseout="hoverEffect(false, this)">
+						<div class="point-title">
+							<i class="fa-solid fa-graduation-cap degree-logo"></i>Master of
+							Science in Computer Science
+						</div>
+						<div class="university-info">
+							<img
+								src="./Icons/umbc_logo.png"
+								alt="University Logo"
+								class="university-logo2" />
+							<span>University of Maryland, Baltimore County</span>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -503,7 +512,76 @@
 				</div>
 			</div>
 		</section>
+		<section>
+			<div
+				class="about"
+				id="About">
+				<div class="about-text">
+					<h2>About <span>Me</span></h2>
+					<p>
+						I’m the tech wizard who thrives on the frontline of code, crafting
+						seamless digital experiences from the ground up. In the tech
+						trenches for over three years, I've honed a fierce command over both
+						the face and the engine of web applications. Forget the dusty
+						textbooks; my education has been the cut and thrust of
+						problem-solving in dynamic environments like the University of
+						Maryland, IBM, and the innovation-driven corridors of TechTrunks.
+						With an arsenal of languages at my fingertips and the latest
+						frameworks under my belt, I'm all about turning bold ideas into
+						software that sings. Ready for the next challenge, I'm here to code,
+						create, and catapult your projects to new heights. Let's make
+						something awesome together.<br />
+						<br />
+						<a
+							href="https://sainikhil-resume.tiiny.site/"
+							style="--i: 11"
+							class="abtbtn-box"
+							target="_blank"
+							>Download Resume</a
+						>
+					</p>
+				</div>
+				<div
+					class="Background"
+					id="Background">
+					<div class="education-roadmap">
+						<div
+							class="roadmap-point"
+							onmouseover="hoverEffect(true, this)"
+							onmouseout="hoverEffect(false, this)">
+							<div class="point-title">
+								<i class="fa-solid fa-graduation-cap degree-logo"></i> Bachelor
+								of Technology in Computer Science and Engineering
+							</div>
+							<div class="university-info">
+								<img
+									src="./Icons/LPU_logo.png"
+									alt="University Logo"
+									class="university-logo" />
+								<span>Lovely Professional University</span>
+							</div>
+						</div>
 
+						<div
+							class="roadmap-point"
+							onmouseover="hoverEffect(true, this)"
+							onmouseout="hoverEffect(false, this)">
+							<div class="point-title">
+								<i class="fa-solid fa-graduation-cap degree-logo"></i>Master of
+								Science in Computer Science
+							</div>
+							<div class="university-info">
+								<img
+									src="./Icons/umbc_logo.png"
+									alt="University Logo"
+									class="university-logo2" />
+								<span>University of Maryland, Baltimore County</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<section
 			class="contacts"
 			id="Contact">
