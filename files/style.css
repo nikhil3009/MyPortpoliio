@@ -1,6 +1,130 @@
 /** @format */
 /** @format */
 
+.experience {
+	background-color: #000;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	color: rgb(147, 102, 195);
+}
+
+.timeline-container {
+	position: relative;
+	width: 1200px;
+	margin: auto;
+}
+
+.timeline {
+	position: absolute;
+	width: 2px; /* Timeline width */
+	background-color: rgb(147, 102, 195);
+	left: 50%; /* Adjust if your icon's size changes */
+	top: 0;
+	bottom: 0;
+	z-index: 1;
+}
+
+.timeline-item {
+	display: flex;
+	justify-content: flex-end; /* Align to the right side of the timeline */
+	margin-bottom: 30px;
+	position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+	justify-content: flex-start; /* Align to the left side of the timeline */
+}
+
+.timeline-icon {
+	position: absolute; /* Absolute positioning to place it exactly over the timeline */
+	top: 50%; /* Start at the vertical center of its parent */
+	left: 50%; /* Start at the horizontal center of its parent */
+	transform: translate(
+		-50%,
+		-50%
+	); /* Adjust the position to be centered exactly */
+	width: 70px; /* Your specified size */
+	height: 70px; /* Your specified size */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	background-color: black; /* Your specified color */
+	border: 4px solid rgb(61, 61, 64); /* Your specified border */
+	z-index: 2; /* Ensure it's above the timeline */
+}
+
+.imgR {
+	width: 60px; /* Adjust the size of the logo if necessary */
+	border-radius: 50%;
+}
+.imgI {
+	width: 50px; /* Adjust the size of the logo if necessary */
+}
+
+.timeline-content {
+	background-color: #222;
+	border-radius: 3px;
+	color: #fff;
+	padding: 15px;
+	width: calc(50% - 60px); /* Adjust the width of the content box */
+	margin: 0 10px;
+	position: relative;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+	z-index: 1; /* Above the timeline */
+	padding-left: 10px;
+	padding-right: 10px;
+	border: 4px solid rgb(182, 181, 181);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.datee {
+	margin-top: 67px;
+	margin-left: 82px;
+	font-size: large;
+	font-weight: 800;
+}
+.datel {
+	margin-top: 67px;
+	margin-right: 82px;
+	font-size: large;
+	font-weight: 800;
+}
+
+.timeline-content h3 {
+	color: rgba(147, 102, 195, 0.7);
+}
+.timeline-content h2 {
+	color: #fff;
+}
+
+.timeline-content .date {
+	color: rgba(147, 102, 195, 0.7);
+	font-size: 0.9em;
+}
+
+/* Hover effect */
+.timeline-content:hover {
+	transform: translateY(-10px) scale(1.05);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+.timeline-icon:hover {
+	box-shadow: 0 0 50px rgb(147, 102, 195);
+}
+
+/* Responsive adjustments might be necessary for smaller screens */
+@media (max-width: 600px) {
+	.timeline-content,
+	.timeline-icon {
+		width: 100%; /* Full width for mobile */
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.timeline {
+		left: 10px; /* Adjust for mobile view */
+	}
+}
+
 .Background {
 	background-color: #000; /* Dark background */
 	color: rgb(147, 102, 195); /* Main font color */
