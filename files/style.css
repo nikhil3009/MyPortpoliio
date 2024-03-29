@@ -300,6 +300,13 @@ body {
 .subtitle span {
 	color: #3498db; /* Theme color for 'Skills' */
 }
+.exptitle {
+	padding-bottom: 40px;
+}
+.protitle {
+	padding-bottom: 40px;
+	padding-top: 50px;
+}
 
 .skills-grid {
 	display: grid;
