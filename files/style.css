@@ -1,5 +1,266 @@
 /** @format */
-/** @format */
+
+#certifications {
+	background-color: transparent; /* Background color of the certifications section */
+	color: #fff; /* Text color */
+	text-align: center; /* Centers the heading */
+	padding: 40px 0; /* Increased padding for more space */
+}
+
+.certifications-container {
+	display: flex;
+	justify-content: center; /* Centers certifications horizontally */
+	align-items: center; /* Aligns certifications vertically */
+	flex-wrap: wrap; /* Allows certifications to wrap on small screens */
+	gap: 20px; /* Spaces out the certifications */
+}
+
+.certification {
+	display: flex;
+	flex-direction: column; /* Stack the image and text */
+	align-items: center; /* Centers the content of each certification */
+	transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+	cursor: pointer; /* Changes the cursor to indicate clickable items */
+}
+
+.certification img {
+	width: 150px; /* Width of the images */
+	height: 150px; /* Height of the images, adjusted for square ratio */
+	margin-bottom: 10px; /* Space between image and text */
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+	border-radius: 10px; /* Optional: rounds the corners for a softer look */
+	transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.certification span {
+	color: rgb(147, 102, 195); /* Text color for certification names */
+	font-size: 1em; /* Adjusted text size for better visibility */
+}
+
+.certification:hover img {
+	transform: scale(1.1) translateZ(0); /* Scales up the image and moves it along the z-axis */
+	z-index: 1; /* Ensures the image is above others when scaled up */
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); /* Enhances shadow for 3D effect */
+}
+
+/**/
+.icons-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.icons-list li {
+	position: absolute;
+	width: 100px; /* Adjust based on icon size */
+	height: 100px; /* Adjust based on icon size */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.icons-list li i {
+	font-size: 2em;
+	color: rgb(147, 102, 195);
+}
+
+/**/
+.lets-connect {
+	background-color: transparent; /* Semi-transparent background */
+	border-radius: 10px; /* Rounded corners for the container */
+	padding: 2rem; /* Spacing inside the container */
+	box-shadow: 0 10px 20px rgb(147, 102, 195); /* Shadow for 3D effect */
+	color: #fff; /* Text color */
+	width: 60%;
+}
+
+.lets-connect h1 {
+	text-transform: uppercase; /* Modern look for the heading */
+	letter-spacing: 1.5px; /* Spacing between letters for the heading */
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for 3D effect */
+	text-align: center;
+}
+.form-group {
+	margin-bottom: 1rem; /* Spacing between form elements */
+}
+
+.form-group label {
+	display: block; /* Ensure the label is on a new line */
+	margin-bottom: 0.5rem; /* Spacing between label and input field */
+	opacity: 0.85; /* Slightly see-through labels for a modern aesthetic */
+}
+
+.form-control {
+	width: 100%; /* Full width */
+	background-color: rgba(
+		255,
+		255,
+		255,
+		0.1
+	); /* Semi-transparent input backgrounds */
+	border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border for inputs */
+	border-radius: 5px; /* Rounded edges for inputs */
+	padding: 0.75rem; /* Padding inside the inputs */
+	color: #fff; /* Input text color */
+}
+.form-control::placeholder {
+	color: rgba(255, 255, 255, 0.7); /* Lighter color for placeholders */
+}
+
+.btn-primary {
+	background-color: rgb(147, 102, 195); /* Button color matching your theme */
+	border: none;
+	padding: 0.75rem 1.5rem; /* Larger padding for a bigger button */
+	width: 40%; /* Set the width of the button - adjust as needed */
+	display: block; /* Ensures the button is a block-level element */
+	margin: 1rem auto; /* Centers the button with automatic margins */
+	border-radius: 5px; /* Consistent border radius with inputs */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+	transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+	cursor: pointer; /* Changes the mouse cursor to a pointer when hovering over the button */
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+	background-color: rgb(165, 120, 218); /* Slightly lighter color on hover */
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increased shadow for lift effect on hover */
+}
+
+/* Add responsive design considerations if necessary */
+@media (max-width: 768px) {
+	.lets-connect {
+		padding: 1rem; /* Less padding on smaller screens */
+	}
+}
+@media (max-width: 768px) {
+	.btn-primary {
+		width: 100%; /* Full width on smaller screens for better mobile responsiveness */
+	}
+}
+
+/**/
+
+.contact-info {
+	text-align: center; /* Center text for heading */
+	display: flex;
+	flex-direction: column;
+	justify-content: center; /* Center the content vertically */
+	align-items: center; /* Center the content horizontally */
+}
+
+.contact-info h2 {
+	margin-bottom: 20px; /* Spacing below the heading */
+	color: rgb(147, 102, 195); /* Your chosen color for headings */
+}
+
+.contact-list {
+	list-style: none; /* Remove list bullets */
+	padding: 0; /* Remove default padding */
+	margin: 20px 0; /* Spacing above and below the contact list */
+}
+
+.contact-list li {
+	margin: 10px 0; /* Spacing between contact list items */
+	display: flex; /* Aligns the icon and text */
+	align-items: center; /* Center the items vertically */
+	justify-content: center; /* Center the items horizontally */
+}
+
+.contact-icons {
+	display: flex;
+	justify-content: center; /* Align horizontally */
+	align-items: center; /* Align vertically */
+	gap: 10px; /* Adjust the space between the icons as needed */
+}
+
+.contact-icons a {
+	text-decoration: none; /* Optional: Removes the underline from links */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Adjustments for icon size and color may also be necessary */
+.contact-icons i {
+	font-size: 1.5rem; /* Adjust the icon size as necessary */
+	color: inherit; /* Optional: Icons use current text color */
+}
+
+.form-control {
+	width: 100%; /* Full width */
+	box-sizing: border-box; /* Include padding and borders in the width */
+	padding: 10px; /* Comfortable padding inside the inputs */
+	margin-bottom: 15px; /* Space between each form element */
+	border: 1px solid #ccc; /* Example border, adjust as needed */
+	border-radius: 5px; /* Rounded corners for the inputs */
+}
+
+/* Add this if you want to ensure that all elements of the form are full width */
+#myForm > .form-group {
+	width: 100%; /* Full width */
+	box-sizing: border-box; /* Include padding and borders in the width */
+}
+.contacts {
+	background-color: #000; /* Portfolio background color */
+	color: rgb(147, 102, 195); /* Main font color */
+	padding: 40px 20px; /* Spacing around the content */
+}
+
+.contact-text > h2 {
+	color: rgb(147, 102, 195); /* Headings color */
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for 3D effect */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.split {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.contact-info {
+	border-radius: 10px;
+	padding-left: 70px;
+	padding-top: 50px;
+}
+
+.contact-info {
+	width: 40%; /* Contact info takes 40% space */
+	color: #fff;
+}
+
+.form-control {
+	border-radius: 5px;
+	background: rgba(147, 102, 195, 0.1);
+	border: 1px solid rgb(147, 102, 195);
+	color: #fff;
+}
+
+.contact-icons a,
+.contact-list li {
+	color: #fff; /* Icons and list color */
+	text-decoration: none; /* Remove underline from icons */
+}
+
+.contact-icons i,
+.contact-list i {
+	margin-right: 8px;
+}
+
+/* Additional styles for responsiveness and spacing might be needed */
+
+h1.text-center {
+	color: #333; /* Dark color for the title */
+	margin-bottom: 20px; /* Spacing below the title */
+}
+
+textarea.form-control {
+	resize: vertical; /* Allow vertical resizing of the textarea */
+}
 
 .experience {
 	background-color: #000;
@@ -412,6 +673,7 @@ body {
 	text-decoration: none;
 	font-weight: 500;
 	margin-left: 35px;
+
 	transition: 0.3s;
 	opacity: 0;
 	animation: slideUP 0.5s ease forwards;
@@ -576,6 +838,12 @@ body {
 
 .about-text {
 	margin-right: 2%;
+	text-align: center;
+	padding: 20px;
+	background-color: transparent;
+	position: relative;
+	width: 100%;
+	height: 500px;
 }
 
 .about-text h2 {
@@ -601,6 +869,7 @@ body {
 .abtbtn-box {
 	display: inline-block;
 	padding: 12px 28px;
+	margin-top: 20px;
 	background: rgb(147, 102, 195);
 	border-radius: 40px;
 	font-size: 15px;
@@ -626,6 +895,15 @@ body {
 	font-size: 60px;
 	padding-bottom: 10px;
 	padding-top: 70px;
+}
+.subtitle2 {
+	text-align: center;
+	font-size: 40px;
+	padding-bottom: 10px;
+	padding-top: 70px;
+}
+.subtitle2 span {
+	color: rgb(147, 102, 195);
 }
 
 .subtitle span {
@@ -761,9 +1039,6 @@ body {
 /*contacts*/
 
 .contacts {
-	display: grid;
-	/*grid-template-columns: repeat (2, 1fr);*/
-	align-items: center;
 	gap: 3rem;
 	padding: 40px;
 	padding-top: 70px;
@@ -851,7 +1126,7 @@ body {
 .top {
 	position: fixed;
 	bottom: 2.1rem;
-	left: 1rem;
+	right: 1rem;
 	display: flex;
 	opacity: 0;
 	transition: all 0.4s;
