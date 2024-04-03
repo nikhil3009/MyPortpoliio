@@ -96,3 +96,59 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	});
 });
+const form = document.querySelector('form');
+const fullName = document.getElementById('name');
+const email = document.getElementById('email');
+const subject = document.getElementById('subject');
+const message = document.getElementById('message');
+console.log(fullName);
+console.log(email);
+console.log(message);
+
+function sendEmail() {
+	if (!fullName.value || !email.value || !message.value) {
+		Swal.fire({
+			title: 'Error',
+			text: 'Please fill in all required fields.',
+			icon: 'error',
+		});
+		return;
+	}
+	const bodyMessage = `Full Name: ${fullName.value} <br> Email:${email.value} Message:${message.value}`;
+	Email.send({
+		Host: 'smtp.elasticemail.com',
+		Username: 'sainikhil3009@gmail.com',
+		Password: 'E923E880B11D7C98E497E9095A5D19229F82',
+		To: 'sainikhil3009@gmail.com',
+		From: 'sainikhil3009@gmail.com',
+		Subject: subject.value || 'No Subject',
+		Body: bodyMessage,
+	})
+		.then((message) => {
+			if (message == 'OK') {
+				Swal.fire({
+					title: 'Success',
+					text: 'Thankyou for contacting, Message sent Successfully',
+					icon: 'success',
+				});
+			} else {
+				Swal.fire({
+					title: 'Error',
+					text: 'Your message could not be sent. Please try again later.',
+					icon: 'error',
+				});
+			}
+		})
+		.catch((error) => {
+			Swal.fire({
+				title: 'Error',
+				text: 'There was an error sending your message. Please try again later.',
+				icon: 'error',
+			});
+			console.error('Email sending error:', error);
+		});
+}
+form.addEventListener('submit', (e) => {
+	e.preventDefault();
+	sendEmail();
+});
